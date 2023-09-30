@@ -1,0 +1,74 @@
+*,
+*::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #FC8863;
+}
+.contenedor {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculadora {
+    background-color: #EAE4D3;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    box-shadow: 0px 3px 5px 0px rgb(83, 77, 77);
+    max-width: 30rem;
+}
+.resultado__texto {
+    width: 100%;
+    height: 5rem;
+    text-align: right;
+    font-size: 3rem;
+    border-radius: .5rem;
+    background-color: white;
+    padding: 0 1rem;
+}
+.calculadora__botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-flow: dense;
+    gap: 1rem;
+}
+.boton {
+    background-color: white;
+    color: rgb(83, 77, 77);
+    font-size: 3rem;
+    padding: .5rem;
+    border: none;
+    border-radius: .5rem;
+    font-size: 3rem;
+    box-shadow: 0px 3px 5px 0px rgb(83, 77, 77);
+    cursor: pointer;
+}
+.boton--accion {
+    background-color: #928686;
+    color: white;
+}
+.boton:nth-child(1) {
+    grid-column: 1 / span 2;
+}
+.boton:nth-child(5) {
+    grid-column: 4 / span 1;
+}
+.boton:nth-child(4) {
+    grid-row: 3 / 4;
+    grid-column: 4 / span 1;
+}
+.boton:nth-child(6) {
+    grid-row: 4 / 6;
+    grid-column: 4 / span 1;
+}
+.boton:nth-child(16) {
+    grid-row: 5 / 6;
+    grid-column: 1 / span 2;
+}
