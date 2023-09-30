@@ -2,11 +2,11 @@ let operacionEscrita = '', operadorPresionado = '', escribir = true;
 const txtResultado = document.getElementById('txtResultado');
 const botonesNumero = document.querySelectorAll('.numero'), botonesAccion = document.querySelectorAll('.boton--accion');
 
-// const botonera = document.querySelector('.botonera');
-// console.log(botonera);
-// botonera.addEventListener('click', (e) => {
-//     console.log(e.target.textContent);
-// });
+const botonera = document.querySelector('.calculadora__botones');
+console.log(botonera);
+botonera.addEventListener('click', (e) => {
+    console.log(e.target);
+});
 
 const escribirOperacion = (valor) => {
     operacionEscrita += valor;
@@ -17,7 +17,7 @@ const limpiarOperacion = () => {
     escribir = true;
     operacionEscrita = '';
     operadorPresionado = '';
-    txtResultado.value = '';
+    txtResultado.value = '0';
 }
 
 const mostrarResultado = () => {
